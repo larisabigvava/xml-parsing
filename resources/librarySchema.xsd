@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.epam.com/librarySchema"
+        xmlns:lib="http://www.epam.com/librarySchema">
+    <simpleType name="genreType">
+        <restriction base="string">
+            <enumeration value="Romance"/>
+            <enumeration value="Science_Fiction"/>
+            <enumeration value="Historical_Fiction"/>
+            <enumeration value="Fantasy"/>
+            <enumeration value="Mystery"/>
+            <enumeration value="Biography"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="bookAuthorType">
+        <restriction base="string">
+            <pattern value="([A-Z]([a-z])*[\-\.\s]?)+"/>
+            <minLength value="5"/>
+            <maxLength value="255"/>
+        </restriction>
+    </simpleType>
+    <element name="books">
+        <complexType>
+            <sequence>
+                <element name="book" type="lib:book" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="book">
+        <sequence>
+            <element name="title" type="string"/>
+            <element name="author" type="lib:bookAuthorType"/>
+            <element name="genre" type="lib:genreType"/>
+        </sequence>
+        <attribute name="countOfPages" type="integer" use="required"/>
+        <attribute name="yearOfPublishing" type="integer" use="optional"/>
+    </complexType>
+</schema>

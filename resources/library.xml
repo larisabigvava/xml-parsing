@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lib:books
+        xmlns:lib="http://www.epam.com/librarySchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.epam.com/librarySchema
+librarySchema.xsd">
+    <book countOfPages="263">
+        <title>The Godfather</title>
+        <author>Mario Puzo</author>
+        <genre>Mystery</genre>
+    </book>
+    <book countOfPages="2355" yearOfPublishing="1982">
+        <title>The Hobbit</title>
+        <author>J.R.R.Tolkien</author>
+        <genre>Fantasy</genre>
+    </book>
+    <book countOfPages="500" yearOfPublishing="1980">
+        <title>The Hitchhiker's Guide to the Galaxy</title>
+        <author>Douglas Adams</author>
+        <genre>Science_Fiction</genre>
+    </book>
+    <book countOfPages="305">
+        <title>Pride and Prejudice</title>
+        <author>Jane Austen</author>
+        <genre>Romance</genre>
+    </book>
+    <book countOfPages="935">
+        <title>War and Peace</title>
+        <author>Leo Tolstoy</author>
+        <genre>Historical_Fiction</genre>
+    </book>
+    <book countOfPages="10562" yearOfPublishing="2005">
+        <title>Harry Potter series</title>
+        <author>J.K.Rowling</author>
+        <genre>Fantasy</genre>
+    </book>
+</lib:books>
