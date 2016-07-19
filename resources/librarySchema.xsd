@@ -4,12 +4,12 @@
         xmlns:lib="http://www.epam.com/librarySchema">
     <simpleType name="genreType">
         <restriction base="string">
-            <enumeration value="Romance"/>
-            <enumeration value="Science_Fiction"/>
-            <enumeration value="Historical_Fiction"/>
-            <enumeration value="Fantasy"/>
-            <enumeration value="Mystery"/>
-            <enumeration value="Biography"/>
+            <enumeration value="ROMANCE"/>
+            <enumeration value="SCIENCE_FICTION"/>
+            <enumeration value="HISTORICAL_FICTION"/>
+            <enumeration value="FANTASY"/>
+            <enumeration value="MYSTERY"/>
+            <enumeration value="BIOGRAPHY"/>
         </restriction>
     </simpleType>
     <simpleType name="bookAuthorType">
