@@ -35,18 +35,18 @@ public class LibraryStAXParser {
             switch (type) {
                 case XMLStreamConstants.START_ELEMENT:
                     elementName = LibraryTagName.getElementTagName(reader.getLocalName());
-                    switch (elementName) {
-                        case BOOK:
-                            book = new Book();
-                            Integer countOfPages = Integer.parseInt(reader.getAttributeValue(null, "countOfPages"));
-                            book.setCountOfPages(countOfPages);
-                            if (!reader.getAttributeValue(null, "yearOfPublishing").isEmpty()) {
-                                Integer yearOfPublishing = Integer.parseInt(reader.getAttributeValue(null, "yearOfPublishing"));
-                                book.setYearOfPublishing(yearOfPublishing);
-                            }
-                            break;
-                    }
-                    break;
+                        switch (elementName) {
+                            case BOOK:
+                                book = new Book();
+                                Integer countOfPages = Integer.parseInt(reader.getAttributeValue(null, "countOfPages"));
+                                book.setCountOfPages(countOfPages);
+                                if (!(reader.getAttributeValue(null, "yearOfPublishing") == null) && !(reader.getAttributeValue(null, "yearOfPublishing").isEmpty())) {
+                                    Integer yearOfPublishing = Integer.parseInt(reader.getAttributeValue(null, "yearOfPublishing"));
+                                    book.setYearOfPublishing(yearOfPublishing);
+                                }
+                                break;
+                        }
+                        break;
                 case XMLStreamConstants.CHARACTERS:
                     String text = reader.getText().trim();
                     if (text.isEmpty()) {

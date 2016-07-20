@@ -16,9 +16,10 @@ public enum LibraryTagName {
                 return GENRE;
             case "book":
                 return BOOK;
-            case "lib:books":
+            case "books":
                 return LIB_BOOKS;
-            default:throw new EnumConstantNotPresentException(LibraryTagName.class, element);
+            default:
+                throw new EnumConstantNotPresentException(LibraryTagName.class, element);
         }
     }
 }
